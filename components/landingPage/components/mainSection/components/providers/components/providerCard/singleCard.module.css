@@ -1,0 +1,17 @@
+.cardLogo {
+  border-radius: 16px 16px 0px 0px;
+  background: #e10a0a;
+  text-align: center;
+  padding: 1rem;
+}
+.cardLogo img {
+  border-radius: 16px 16px 0px 0px;
+}
+
+.cardContent {
+  padding: 9px;
+  font-weight: 600;
+  font-size: 12px;
+  min-height: 70px;
+  font-family: "Instrument Sans";
+}

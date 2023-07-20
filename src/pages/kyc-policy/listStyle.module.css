@@ -1,0 +1,50 @@
+.numbered_list {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+  padding-left: 2rem;
+}
+
+.numbered_list li {
+  counter-increment: item;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.numbered_list li:before {
+  content: counter(item) ")";
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.dashed_list {
+  list-style: none;
+  padding: 0;
+  padding-left: 2rem;
+}
+
+.dashed_list li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.dashed_list li:before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+.numeric_list {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.numeric_list li {
+  margin: 0.5rem 0;
+}
+
+.alphabetical_list {
+  list-style-type: lower-alpha;
+  padding-left: 20px;
+}

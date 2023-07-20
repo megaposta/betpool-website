@@ -1,0 +1,22 @@
+.providersHeader {
+  border-radius: 16px 16px 0px 0px;
+  background: #fff;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+}
+.providersTitle {
+  color: #1f2947;
+  font-size: 1rem;
+  font-family: Roboto !important;
+  font-weight: 400;
+}
+
+.viewAllBtn {
+  color: #1f2947;
+  border: 1px solid #1f2947;
+  border-radius: 999px;
+  padding: 12px;
+  font-family: Roboto !important;
+  font-weight: 700;
+  line-height: 16px;
+}

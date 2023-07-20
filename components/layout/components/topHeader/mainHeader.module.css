@@ -1,0 +1,27 @@
+.mainHeader {
+  border-radius: 16px;
+  border-bottom: 1px solid #b40909;
+  background: linear-gradient(180deg, #e10a0a 0%, #ba0c0c 100%);
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+}
+.registerButton {
+  border-radius: 9999999px;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+.registerButton:hover {
+  background: #fff;
+  color: #000;
+}
+
+.loginButton {
+  font-weight: 700;
+  color: #fff;
+}

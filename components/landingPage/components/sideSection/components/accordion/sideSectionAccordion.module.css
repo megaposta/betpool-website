@@ -1,0 +1,39 @@
+.accordionContainer {
+  border-radius: 16px !important;
+  border-bottom: 1px solid #f2f1f1 !important;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0.68) 100%
+  ) !important;
+
+  /* shadow 4 */
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.08) !important;
+}
+
+.accordionTitle {
+  font-family: Instrument Sans;
+  font-weight: 700;
+  font-size: 0.6rem;
+  position: relative;
+}
+.accordionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -125%;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.extended {
+  color: #e10a0a;
+}
+.extended::after {
+  bottom: -180%;
+  border-bottom: 1px solid #e10a0a;
+}
+
+.accordionDetails {
+  background-color: #f5f5f5;
+}

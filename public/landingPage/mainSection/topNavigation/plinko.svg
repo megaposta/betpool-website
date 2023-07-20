@@ -1,0 +1,51 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Casino Icons" clip-path="url(#clip0_413_55775)">
+<g id="g3603">
+<g id="g3605">
+<g id="Clip path group">
+<mask id="mask0_413_55775" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-1" y="0" width="33" height="32">
+<g id="clipPath3611">
+<path id="path3609" d="M-0.0078125 3.8147e-06H31.9922V32H-0.0078125V3.8147e-06Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_413_55775)">
+<g id="g3607">
+<g id="g3613">
+<path id="path3615" d="M17.8672 22.8125C17.8672 23.848 17.0277 24.6875 15.9922 24.6875C14.9567 24.6875 14.1172 23.848 14.1172 22.8125C14.1172 21.777 14.9567 20.9375 15.9922 20.9375C17.0277 20.9375 17.8672 21.777 17.8672 22.8125Z" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="g3617">
+<path id="path3619" d="M21.6172 22.8125C21.6172 23.848 20.7777 24.6875 19.7422 24.6875C18.7067 24.6875 17.8672 23.848 17.8672 22.8125C17.8672 21.777 18.7067 20.9375 19.7422 20.9375C20.7777 20.9375 21.6172 21.777 21.6172 22.8125Z" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="g3621">
+<path id="path3623" d="M20.9922 6.5625C20.9922 7.598 20.1527 8.4375 19.1172 8.4375C18.0817 8.4375 17.2422 7.598 17.2422 6.5625C17.2422 5.527 18.0817 4.6875 19.1172 4.6875C20.1527 4.6875 20.9922 5.527 20.9922 6.5625Z" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="g3625">
+<path id="path3627" d="M25.3672 12.8125C25.3672 13.848 24.5277 14.6875 23.4922 14.6875C22.4567 14.6875 21.6172 13.848 21.6172 12.8125C21.6172 11.777 22.4567 10.9375 23.4922 10.9375C24.5277 10.9375 25.3672 11.777 25.3672 12.8125Z" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="g3629">
+<path id="path3631" d="M17.8672 12.8125C17.8672 13.848 17.0277 14.6875 15.9922 14.6875C14.9567 14.6875 14.1172 13.848 14.1172 12.8125C14.1172 11.777 14.9567 10.9375 15.9922 10.9375C17.0277 10.9375 17.8672 11.777 17.8672 12.8125Z" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="g3633">
+<path id="path3635" d="M11.6172 15.3125C11.6172 16.348 10.7777 17.1875 9.74219 17.1875C8.70669 17.1875 7.86719 16.348 7.86719 15.3125C7.86719 14.277 8.70669 13.4375 9.74219 13.4375C10.7777 13.4375 11.6172 14.277 11.6172 15.3125Z" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="g3637">
+<path id="path3639" d="M14.1172 22.8125C14.1172 23.848 13.2777 24.6875 12.2422 24.6875C11.2067 24.6875 10.3672 23.848 10.3672 22.8125C10.3672 21.777 11.2067 20.9375 12.2422 20.9375C13.2777 20.9375 14.1172 21.777 14.1172 22.8125Z" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="g3641">
+<path id="path3643" d="M7.09687 21.1554L4.33194 25.3028C3.78438 26.1242 3.49219 27.0892 3.49219 28.0763V31.0625H28.4922V28.0763C28.4922 27.0892 28.2 26.1242 27.6525 25.3028L24.8875 21.1554" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="g3645">
+<path id="path3647" d="M21.4059 0.937501H10.5806C9.68744 0.937501 8.86212 1.414 8.41556 2.1875L3.00294 11.5625C2.55631 12.336 2.55631 13.289 3.00294 14.0625L8.41556 23.4375C8.86212 24.211 9.68744 24.6875 10.5806 24.6875H21.4059C22.2991 24.6875 23.1244 24.211 23.571 23.4375L28.9836 14.0625C29.4302 13.289 29.4302 12.336 28.9836 11.5625L23.571 2.1875C23.1244 1.414 22.2991 0.937501 21.4059 0.937501Z" stroke="#4D545F" stroke-width="1.875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_413_55775">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,5 @@
+.providerCardContainer {
+  border-radius: 0 0 16px 16px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+}
