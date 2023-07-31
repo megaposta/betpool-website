@@ -4,8 +4,11 @@ import React from "react";
 import providersIcon from "../../../../../../public/landingPage/mainSection/providers/providers.svg";
 import classes from "./providers.module.css";
 import ProviderCards from "./components/providerCard";
+import { useTranslation } from "next-i18next";
 
 const Providers = () => {
+  const { t } = useTranslation();
+
   return (
     <Stack>
       <Stack
@@ -21,11 +24,17 @@ const Providers = () => {
             width={24}
             height={24}
           />
-          <Typography variant="p" className={classes.providersTitle}>
-            Providers
+          <Typography
+            variant="p"
+            className={classes.providersTitle}
+            suppressHydrationWarning
+          >
+            {t("HeaderNavigation.Providers")}
           </Typography>
         </Stack>
-        <Button className={classes.viewAllBtn}>View All</Button>
+        <Button className={classes.viewAllBtn} suppressHydrationWarning>
+          {t("HeaderNavigation.viewAll")}
+        </Button>
       </Stack>
       <ProviderCards />
     </Stack>

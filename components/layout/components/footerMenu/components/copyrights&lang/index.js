@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
@@ -8,21 +8,23 @@ import Image from "next/image";
 import enFlag from "../../../../../../public/flags/en.svg";
 import brFlag from "../../../../../../public/flags/br.svg";
 import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
 
 const CopyRightsAndLang = () => {
-  const router = useRouter();
+  const theme = useTheme();
+  const mediaQuery400 = useMediaQuery(theme.breakpoints.down("400"));
+  const mediaQuery550 = useMediaQuery(theme.breakpoints.down("550"));
+
   const { t, i18n } = useTranslation();
   const langs = [
     {
-      value: t("english"),
-      label: "English",
+      value: t("English"),
+      label: t("English"),
       code: "en",
       flag: enFlag,
     },
     {
-      value: t("brazilian"),
-      label: "Brazilian",
+      value: t("Brazilian"),
+      label: t("Brazilian"),
       code: "pt-BR",
       flag: brFlag,
     },
@@ -33,9 +35,11 @@ const CopyRightsAndLang = () => {
 
   return (
     <Stack
-      direction={"row"}
-      alignItems={"center"}
+      direction={mediaQuery400 ? "column" : "row"}
+      alignItems={mediaQuery400 ? "flex-start" : "center"}
       justifyContent={"space-between"}
+      spacing={mediaQuery400 ? 2 : 0}
+      sx={{ paddingBottom: mediaQuery550 ? "4rem" : 0 }}
     >
       <Typography variant="p" className={classes.sofiaProFont}>
         © 2023 Betpool.com All rights reserved.
@@ -77,7 +81,7 @@ const CopyRightsAndLang = () => {
                     marginRight: "0.5rem",
                   }}
                 />
-                {value === "en" ? "English" : "Brazilian"}
+                {value === "en" ? t("Eglish") : t("Brazilian")}
               </Box>
             );
           }}

@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
@@ -13,11 +13,16 @@ import online from "../../../../../../public/footer-icons/online.png";
 import eTransfer from "../../../../../../public/footer-icons/eTransfer.png";
 
 const PaymentMethods = () => {
+  const theme = useTheme();
+  const mediaQuery769 = useMediaQuery(theme.breakpoints.down("769"));
   return (
     <Stack
       direction={"row"}
       alignItems={"center"}
       justifyContent={"space-between"}
+      flexWrap={"wrap"}
+      spacing={mediaQuery769 ? 2 : 0}
+      rowGap={mediaQuery769 ? 2 : 0}
     >
       <Image
         src={visa}

@@ -11,52 +11,74 @@ import openChatIcon from "../../../../../../public/landingPage/mainSection/topNa
 import TopNavigationItem from "./components/topNavigationItem";
 import classes from "./topNavigationContainer.module.css";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
-const data = [
-  {
-    title: "Home",
-    icon: homeIcon,
-  },
-  {
-    title: "All Sports",
-    icon: allSportsIcon,
-  },
-  {
-    title: "In-Play",
-    icon: inPlayIcon,
-  },
-  {
-    title: "Casino",
-    icon: casinoIcon,
-  },
-  {
-    title: "Live Casino",
-    icon: liveCasinoIcon,
-  },
-  {
-    title: "Aviator",
-    icon: aviatorIcon,
-  },
-  {
-    title: "Plinko",
-    icon: plinkoIcon,
-  },
-];
+const TopNavigation = ({
+  customSx,
+  mediaQuery769,
+  mediaQuery668,
+  mediaQuery556,
+  mediaQuery460,
+}) => {
+  const { t } = useTranslation();
 
-const TopNavigation = () => {
+  const data = [
+    {
+      title: t("TopNavigation.Home"),
+      icon: homeIcon,
+    },
+    {
+      title: t("TopNavigation.AllSports"),
+      icon: allSportsIcon,
+    },
+    {
+      title: t("TopNavigation.In-play"),
+      icon: inPlayIcon,
+    },
+    {
+      title: t("TopNavigation.Casino"),
+      icon: casinoIcon,
+    },
+    {
+      title: t("TopNavigation.LiveCasino"),
+      icon: liveCasinoIcon,
+    },
+    {
+      title: t("TopNavigation.Aviator"),
+      icon: aviatorIcon,
+    },
+    {
+      title: t("TopNavigation.Plinko"),
+      icon: plinkoIcon,
+    },
+  ];
+
   return (
     <Stack
       direction={"row"}
       justifyContent={"space-between"}
       alignItems={"center"}
       className={classes.topNavigationContainer}
+      sx={{ ...customSx }}
+      spacing={3}
+      flexWrap={"wrap"}
     >
-      <Stack direction={"row"} alignItems={"center"} spacing={2}>
+      <Stack
+        direction={"row"}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        spacing={
+          mediaQuery460 ? 0.1 : mediaQuery556 ? 1 : mediaQuery769 ? 2 : 1
+        }
+        rowGap={mediaQuery556 ? 2 : 0}
+        flexWrap={"wrap"}
+        width={mediaQuery668 ? "100%" : "auto"}
+      >
         {data.map((item, index) => (
           <TopNavigationItem item={item} key={index} />
         ))}
       </Stack>
-      <Box>
+      <Box sx={{ display: mediaQuery668 ? "none" : "block" }}>
         <Image src={openChatIcon} alt="chat_icon" width={48} height={48} />
       </Box>
     </Stack>

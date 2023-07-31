@@ -54,14 +54,14 @@ const data = [
     ],
   },
 ];
-const SideSection = () => {
+const SideSection = ({ customSx }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <Stack className={classes.sideSection} spacing={2}>
+    <Stack sx={{ ...customSx }} className={classes.sideSection} spacing={2}>
       {data.map((item, index) => (
         <SideSectionAccordion
           key={index}

@@ -1,11 +1,13 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import gameingCuracao from "../../../../../../public/footer-icons/gamingCuracao.png";
 import classes from "../../footerMenu.module.css";
 const SiteDescription = () => {
+  const theme = useTheme();
+  const mediaQuery425 = useMediaQuery(theme.breakpoints.down("425"));
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={mediaQuery425 ? "column" : "row"} spacing={4}>
       <Image
         src={gameingCuracao}
         alt="Gameing Curacao"

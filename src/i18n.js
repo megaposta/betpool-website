@@ -2,12 +2,11 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import enTranslation from "../public/locales/en.json";
-import ptBRTranslation from "../public/locales/pt-BR.json";
+import TranslationFile from "../public/locales/translations.json";
 
 const resources = {
-  en: { translation: enTranslation },
-  "pt-BR": { translation: ptBRTranslation },
+  en: { translation: TranslationFile.en },
+  "pt-BR": { translation: TranslationFile["pt_BR"] },
 };
 
 i18n.use(initReactI18next).init({

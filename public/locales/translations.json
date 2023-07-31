@@ -1,0 +1,44 @@
+{
+  "en": {
+    "TopHeader": {
+      "loginButton": "Login",
+      "registerButton": "Register"
+    },
+    "TopNavigation": {
+      "Home": "Home",
+      "AllSports": "All Sports",
+      "In-play": "In-play",
+      "Casino": "Casino",
+      "LiveCasino": "Live Casino",
+      "Aviator": "Aviator",
+      "Plinko": "Plinko"
+    },
+    "HeaderNavigation": {
+      "Providers": "Providers",
+      "viewAll": "View All"
+    },
+    "English": "English",
+    "Brazilian": "Brazilian"
+  },
+  "pt_BR": {
+    "TopHeader": {
+      "loginButton": "Conecte-se",
+      "registerButton": "Registro"
+    },
+    "TopNavigation": {
+      "Home": "lar",
+      "AllSports": "Todos os esportes",
+      "In-play": "Jogando",
+      "Casino": "Cassino",
+      "LiveCasino": "Cassino ao vivo",
+      "Aviator": "Aviador",
+      "Plinko": "Plinko"
+    },
+    "HeaderNavigation": {
+      "Providers": "Provedores",
+      "viewAll": "Ver tudo"
+    },
+    "English": "Inglês",
+    "Brazilian": "Brasileiro"
+  }
+}

@@ -5,12 +5,24 @@ import Layout from "../../components/layout/Layout";
 import ChatFloatingIcon from "../../components/chatFloating";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../i18n";
+import MobileBottomNavigation from "../../components/layout/components/mobileBottomNavigation";
+import { useState } from "react";
 
 function App({ Component, pageProps }) {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleDrawerOpen = () => {
+    setDrawerOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setDrawerOpen(false);
+  };
+
   return (
     <I18nextProvider i18n={i18n}>
       <Box sx={{ backgroundColor: "#F3F3F3", padding: "1rem 0 0 0" }}>
-        <Layout>
+        <Layout drawerOpen={drawerOpen} handleDrawerClose={handleDrawerClose}>
           <ChatFloatingIcon />
           <Head>
             <title>betPool</title>
@@ -20,6 +32,7 @@ function App({ Component, pageProps }) {
             />
           </Head>
           <Component {...pageProps} />
+          <MobileBottomNavigation handleDrawerOpen={handleDrawerOpen} />
         </Layout>
       </Box>
     </I18nextProvider>

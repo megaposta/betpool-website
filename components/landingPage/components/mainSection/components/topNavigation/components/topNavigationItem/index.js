@@ -1,17 +1,17 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import classes from "./topNavigationItem.module.css";
-// import { useRouter } from "next/router";
 
 const TopNavigationItem = ({ item }) => {
-  // const router = useRouter();
-  // const currentURL = router.asPath;
+  const theme = useTheme();
+  const mediaQuery400 = useMediaQuery(theme.breakpoints.down("400"));
+
   return (
     <Stack
       alignItems={"center"}
       justifyContent={"center"}
-      spacing={2}
+      spacing={mediaQuery400 ? 1 : 2}
       className={classes.ItemContainer}
     >
       <Box className={`${classes.iconContainer}`}>
@@ -23,7 +23,11 @@ const TopNavigationItem = ({ item }) => {
           className={classes.iconStyle}
         />
       </Box>
-      <Typography variant="p" className={classes.title}>
+      <Typography
+        variant="p"
+        className={classes.title}
+        suppressHydrationWarning
+      >
         {item.title}
       </Typography>
     </Stack>

@@ -2,9 +2,12 @@ import React from "react";
 import Fab from "@mui/material/Fab";
 import Image from "next/image";
 import chatIcon from "../../public/landingPage/mainSection/topNavigation/open-chat-icon.png";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 
 const ChatFloatingIcon = () => {
+  const theme = useTheme();
+  const mediaQuery769 = useMediaQuery(theme.breakpoints.down("769"));
+
   const handleClick = () => {
     // Handle click event for opening chat
   };
@@ -18,6 +21,7 @@ const ChatFloatingIcon = () => {
         right: "20px",
         zIndex: 1000,
         cursor: "pointer",
+        display: mediaQuery769 ? "none" : "block",
       }}
     >
       <Image src={chatIcon} alt="chat icon" width={48} height={48} />
