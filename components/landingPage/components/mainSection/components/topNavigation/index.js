@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Tab, Tabs } from "@mui/material";
 import React from "react";
 import homeIcon from "../../../../../../public/landingPage/mainSection/topNavigation/home.svg";
 import allSportsIcon from "../../../../../../public/landingPage/mainSection/topNavigation/all-sports.svg";
@@ -19,6 +19,9 @@ const TopNavigation = ({
   mediaQuery668,
   mediaQuery556,
   mediaQuery460,
+  value,
+  handleChange,
+  a11yProps,
 }) => {
   const { t } = useTranslation();
 
@@ -74,9 +77,30 @@ const TopNavigation = ({
         flexWrap={"wrap"}
         width={mediaQuery668 ? "100%" : "auto"}
       >
-        {data.map((item, index) => (
-          <TopNavigationItem item={item} key={index} />
-        ))}
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          TabIndicatorProps={{ style: { display: "none" } }}
+        >
+          {data.map((item, index) => (
+            <Tab
+              disableRipple
+              sx={{
+                padding: 0,
+                minWidth: "fit-content",
+                margin: "0 0.5rem ",
+              }}
+              key={index}
+              label={
+                <TopNavigationItem
+                  item={item}
+                  activeClass={value === index ? true : false}
+                />
+              }
+              {...a11yProps(index)}
+            />
+          ))}
+        </Tabs>
       </Stack>
       <Box sx={{ display: mediaQuery668 ? "none" : "block" }}>
         <Image src={openChatIcon} alt="chat_icon" width={48} height={48} />

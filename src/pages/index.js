@@ -1,8 +1,20 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import LandingPage from "../../components/landingPage";
+import axios from "axios";
+import { GET_ALLOWED_DESKTOP_GAMES, GET_GAMES_PROVIDERS } from "@/endpoints";
+import { useContext, useEffect } from "react";
+import { DataContext } from "../../context/DataContext";
 
-export default function Home() {
+export default function Home({ allowedGames, gamesProvider }) {
+  const { setProviders, setAllowedGames } = useContext(DataContext);
+  useEffect(() => {
+    setProviders(gamesProvider);
+  }, [gamesProvider]);
+
+  useEffect(() => {
+    setAllowedGames(allowedGames);
+  }, [allowedGames]);
+
   return (
     <>
       <Head>
@@ -14,4 +26,26 @@ export default function Home() {
       <LandingPage />
     </>
   );
+}
+export async function getStaticProps() {
+  const allowedGamesData = await axios.get(GET_ALLOWED_DESKTOP_GAMES, {
+    headers: {
+      Accept: "application/vnd.softswiss.v1+json",
+    },
+  });
+  const allowedGames = allowedGamesData.data;
+
+  const gamesProvidersData = await axios.get(GET_GAMES_PROVIDERS, {
+    headers: {
+      Accept: "application/vnd.softswiss.v1+json",
+    },
+  });
+  const gamesProvider = gamesProvidersData.data;
+
+  return {
+    props: {
+      allowedGames,
+      gamesProvider,
+    },
+  };
 }

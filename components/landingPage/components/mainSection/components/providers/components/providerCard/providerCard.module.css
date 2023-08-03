@@ -7,3 +7,7 @@
 .cardContainer {
   padding: 0 0.5rem;
 }
+
+.customWidth {
+  width: 10em !important;
+}

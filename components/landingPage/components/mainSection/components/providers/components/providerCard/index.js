@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./providerCard.module.css";
 import SingleCard from "./SingleCard";
 
@@ -18,6 +18,7 @@ import yggdrasilLogo from "../../../../../../../../public/landingPage/mainSectio
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { DataContext } from "../../../../../../../../context/DataContext";
 
 const data = [
   { title: "Evolution Gaming", logo: evolutionGamingLogo },
@@ -29,18 +30,19 @@ const data = [
   { title: "BGAMING", logo: bGamingLogo },
 ];
 const ProviderCards = () => {
+  const { providers } = useContext(DataContext);
   const settings = {
     dots: false,
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 7,
+    slidesToShow: providers.length < 7 ? providers.length : 7,
     slidesToScroll: 7,
     responsive: [
       {
         breakpoint: 1250,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: providers.length < 6 ? providers.length : 6,
           slidesToScroll: 6,
           infinite: true,
         },
@@ -48,7 +50,7 @@ const ProviderCards = () => {
       {
         breakpoint: 1050,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: providers.length < 5 ? providers.length : 5,
           slidesToScroll: 5,
           infinite: true,
         },
@@ -56,7 +58,7 @@ const ProviderCards = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: providers.length < 4 ? providers.length : 4,
           slidesToScroll: 4,
           initialSlide: 4,
         },
@@ -64,14 +66,14 @@ const ProviderCards = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: providers.length < 3 ? providers.length : 3,
           slidesToScroll: 3,
         },
       },
       {
         breakpoint: 425,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: providers.length < 2 ? providers.length : 2,
           slidesToScroll: 2,
         },
       },
@@ -81,8 +83,13 @@ const ProviderCards = () => {
   return (
     <div className={classes.providerCardContainer}>
       <Slider {...settings}>
-        {data.map((item, index) => (
-          <div key={index} className={classes.cardContainer}>
+        {providers.map((item) => (
+          <div
+            key={item.id}
+            className={`${classes.cardContainer} ${
+              providers.length < 6 ? classes.customWidth : ""
+            }`}
+          >
             <SingleCard item={item} />
           </div>
         ))}

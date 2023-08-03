@@ -5,18 +5,18 @@
   padding: 16px;
 }
 .providersTitle {
-  color: #1f2947;
-  font-size: 1rem;
+  color: #1f2947 !important;
+  font-size: 1rem !important;
   font-family: Roboto !important;
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .viewAllBtn {
-  color: #1f2947;
-  border: 1px solid #1f2947;
-  border-radius: 999px;
-  padding: 12px;
+  color: #1f2947 !important;
+  border: 1px solid #1f2947 !important;
+  border-radius: 999px !important;
+  padding: 12px !important;
   font-family: Roboto !important;
-  font-weight: 700;
-  line-height: 16px;
+  font-weight: 700 !important;
+  line-height: 16px !important;
 }

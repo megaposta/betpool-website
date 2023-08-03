@@ -15,14 +15,19 @@
   background-color: transparent;
   cursor: pointer;
 }
-.active {
-  border: 1px solid #e10a0a;
+.activeIconContainer {
+  border: 1px solid #e10a0a !important;
+  background-color: transparent;
+  cursor: pointer;
 }
 .ItemContainer:hover .iconContainer .iconStyle {
   filter: brightness(0) saturate(100%) invert(74%) sepia(100%) saturate(9999%)
     hue-rotate(355deg) brightness(110%) contrast(105%) !important;
 }
-
+.activeIconStyle {
+  filter: brightness(0) saturate(100%) invert(74%) sepia(100%) saturate(9999%)
+    hue-rotate(355deg) brightness(110%) contrast(105%) !important;
+}
 .title {
   color: initial;
   font-weight: 700;
@@ -32,7 +37,9 @@
 .ItemContainer:hover .title {
   color: #e10a0a !important;
 }
-
+.activeTitle {
+  color: #e10a0a !important;
+}
 @media screen and (max-width: 580px) {
   .title {
     font-size: 0.6rem;

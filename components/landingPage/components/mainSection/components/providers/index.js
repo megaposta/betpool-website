@@ -1,10 +1,11 @@
 import { Button, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import providersIcon from "../../../../../../public/landingPage/mainSection/providers/providers.svg";
 import classes from "./providers.module.css";
 import ProviderCards from "./components/providerCard";
 import { useTranslation } from "next-i18next";
+import { GET_GAMES_PROVIDERS } from "@/endpoints";
 
 const Providers = () => {
   const { t } = useTranslation();
