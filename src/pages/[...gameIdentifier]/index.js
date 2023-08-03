@@ -1,10 +1,9 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
-import Providers from "../../components/landingPage/components/mainSection/components/providers";
-import { DataContext } from "../../context/DataContext";
+import Providers from "../../../components/landingPage/components/mainSection/components/providers";
+import { DataContext } from "../../../context/DataContext";
 import {
   GET_ALLOWED_DESKTOP_GAMES,
-  GET_GAMES_COLLECTIONS,
   GET_GAMES_PROVIDERS,
   basrUrl,
 } from "@/endpoints";
