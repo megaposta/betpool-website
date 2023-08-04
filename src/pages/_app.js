@@ -3,11 +3,11 @@ import Head from "next/head";
 import { Box } from "@mui/material";
 import Layout from "../../components/layout/Layout";
 import ChatFloatingIcon from "../../components/chatFloating";
-import { I18nextProvider } from "react-i18next";
-import i18n from "../i18n";
 import MobileBottomNavigation from "../../components/layout/components/mobileBottomNavigation";
 import { useState } from "react";
 import DataContextProvider from "../../context/DataContext";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n"; // Adjust the path accordingly
 
 function App({ Component, pageProps }) {
   const [drawerOpen, setDrawerOpen] = useState(false);

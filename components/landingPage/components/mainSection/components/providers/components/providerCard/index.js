@@ -1,34 +1,11 @@
 import React, { useContext } from "react";
 import classes from "./providerCard.module.css";
 import SingleCard from "./SingleCard";
-
-import bGamingLogo from "../../../../../../../../public/landingPage/mainSection/providers/BGaming.png";
-
-import amusnetLogo from "../../../../../../../../public/landingPage/mainSection/providers/amusnet.svg";
-
-import noLimitLogo from "../../../../../../../../public/landingPage/mainSection/providers/nolimit.svg";
-
-import evolutionGamingLogo from "../../../../../../../../public/landingPage/mainSection/providers/evolutionGamming.svg";
-
-import playngoLogo from "../../../../../../../../public/landingPage/mainSection/providers/playngo.svg";
-
-import pragmaticplayLogo from "../../../../../../../../public/landingPage/mainSection/providers/pragmaticplay.svg";
-
-import yggdrasilLogo from "../../../../../../../../public/landingPage/mainSection/providers/yggdrasil.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { DataContext } from "../../../../../../../../context/DataContext";
 
-const data = [
-  { title: "Evolution Gaming", logo: evolutionGamingLogo },
-  { title: "Pragmatic Play", logo: pragmaticplayLogo },
-  { title: "Play’n GO", logo: playngoLogo },
-  { title: "No Limit City", logo: noLimitLogo },
-  { title: "YGGDRASIL", logo: yggdrasilLogo },
-  { title: "Amusnet", logo: amusnetLogo },
-  { title: "BGAMING", logo: bGamingLogo },
-];
 const ProviderCards = () => {
   const { providers } = useContext(DataContext);
   const settings = {

@@ -4,6 +4,7 @@ import axios from "axios";
 import { GET_ALLOWED_DESKTOP_GAMES, GET_GAMES_PROVIDERS } from "@/endpoints";
 import { useContext, useEffect } from "react";
 import { DataContext } from "../../context/DataContext";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home({ allowedGames, gamesProvider }) {
   const { setProviders, setAllowedGames } = useContext(DataContext);
@@ -27,7 +28,7 @@ export default function Home({ allowedGames, gamesProvider }) {
     </>
   );
 }
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const allowedGamesData = await axios.get(GET_ALLOWED_DESKTOP_GAMES, {
     headers: {
       Accept: "application/vnd.softswiss.v1+json",
@@ -44,6 +45,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      // ...(await serverSideTranslations(locale, ["translations"])),
       allowedGames,
       gamesProvider,
     },

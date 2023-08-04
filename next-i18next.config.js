@@ -1,11 +1,7 @@
-// next.config.js
-const { nextI18NextRewrites } = require("next-i18next/rewrites");
-
-const localeSubpaths = {
-  en: "en",
-  pt: "pt-BR",
-};
-
+/** @type {import('next-i18next').UserConfig} */
 module.exports = {
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "pt-BR"],
+  },
 };

@@ -1,6 +1,8 @@
-import { Box, Stack, Typography } from "@mui/material";
+// export const runtime = "experimental-edge";
+import { Stack, Typography } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import Providers from "../../../components/landingPage/components/mainSection/components/providers";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DataContext } from "../../../context/DataContext";
 import {
   GET_ALLOWED_DESKTOP_GAMES,
@@ -29,7 +31,6 @@ const GamePage = ({ serverData, gamesProvider }) => {
     return <p>Loading...</p>;
   }
 
-  console.log("selectedGame", selectedGame);
   return (
     <Stack spacing={2} sx={{ flex: 1 }}>
       <Stack
@@ -64,6 +65,18 @@ const GamePage = ({ serverData, gamesProvider }) => {
           >
             {selectedGame.title}
           </Typography>
+          <Typography
+            sx={{
+              color: " #1F2947",
+              fontFamily: "Instrument Sans",
+              fontSize: "12px",
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "28px" /* 155.556% */,
+            }}
+          >
+            {selectedGame.provider}
+          </Typography>
         </Stack>
       </Stack>
       <Providers />
@@ -73,7 +86,7 @@ const GamePage = ({ serverData, gamesProvider }) => {
 
 export default GamePage;
 
-export async function getServerSideProps() {
+export const getServerSideProps = async (/* { locale } */) => {
   // Fetch data from an API or any other source
   const response = await fetch(GET_ALLOWED_DESKTOP_GAMES);
   const data = await response.json();
@@ -84,8 +97,9 @@ export async function getServerSideProps() {
   // Return the data as props
   return {
     props: {
+      // ...(await serverSideTranslations(locale, ["translation", "common"])),
       serverData: data,
       gamesProvider: providersData,
     },
   };
-}
+};
