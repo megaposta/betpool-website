@@ -4,8 +4,7 @@ import axios from "axios";
 import { GET_ALLOWED_DESKTOP_GAMES, GET_GAMES_PROVIDERS } from "@/endpoints";
 import { useContext, useEffect } from "react";
 import { DataContext } from "../../context/DataContext";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
+import TranslationData from "../../public/locales/translation.json";
 export default function Home({ allowedGames, gamesProvider }) {
   const { setProviders, setAllowedGames } = useContext(DataContext);
   useEffect(() => {
@@ -45,7 +44,7 @@ export async function getStaticProps({ locale }) {
 
   return {
     props: {
-      // ...(await serverSideTranslations(locale, ["translations"])),
+      messages: TranslationData[locale],
       allowedGames,
       gamesProvider,
     },

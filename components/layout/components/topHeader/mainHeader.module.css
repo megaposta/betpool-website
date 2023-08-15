@@ -1,38 +1,38 @@
 .mainHeader {
-  border-radius: 16px;
-  border-bottom: 1px solid #b40909;
-  background: linear-gradient(180deg, #e10a0a 0%, #ba0c0c 100%);
-  padding: 20px;
-  margin-bottom: 2rem;
+  border-radius: 16px !important;
+  border-bottom: 1px solid #b40909 !important;
+  background: linear-gradient(180deg, #e10a0a 0%, #ba0c0c 100%) !important;
+  padding: 20px !important;
+  margin-bottom: 2rem !important;
 }
 .logo {
-  width: 6em;
-  height: auto;
+  width: 6em !important;
+  height: auto !important;
 }
 .registerButton {
-  border-radius: 9999999px;
-  background: #fff;
-  color: #000;
-  font-weight: 700;
-  padding: 10px 20px;
+  border-radius: 9999999px !important;
+  background: #fff !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  padding: 10px 20px !important;
 }
 .registerButton:hover {
-  background: #fff;
-  color: #000;
+  background: #fff !important;
+  color: #000 !important;
 }
 
 .loginButton {
-  font-weight: 700;
-  color: #fff;
+  font-weight: 700 !important;
+  color: #fff !important;
 }
 @media screen and (max-width: 375px) {
   .mainHeader {
-    padding: 15px;
+    padding: 15px !important;
   }
   .logo {
-    width: 5em;
+    width: 5em !important;
   }
   .registerButton {
-    font-size: 0.7rem;
+    font-size: 0.7rem !important;
   }
 }

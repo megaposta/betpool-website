@@ -1,5 +1,5 @@
 import { Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import classes from "./mainSection.module.css";
 import HeaderImages from "./components/headerImages";
 import TopNavigation from "./components/topNavigation";
@@ -10,6 +10,9 @@ import { DataContext } from "../../../../context/DataContext";
 import GameCard from "../../../gameCard";
 import Link from "next/link";
 
+import liveCasino from "../../../../public/landingPage/mainSection/banners/live-casino.png";
+import slotGames from "../../../../public/landingPage/mainSection/banners/slot-games.png";
+import sportsBetting from "../../../../public/landingPage/mainSection/banners/sports-betting.png";
 // import { GET_ALL_DESKTOP_GAMES } from "@/constants/endpoints";
 
 function CustomTabPanel(props) {
@@ -49,6 +52,19 @@ const MainSection = () => {
   const mediaQuery556 = useMediaQuery(theme.breakpoints.down("556"));
   const mediaQuery460 = useMediaQuery(theme.breakpoints.down("460"));
 
+  const targetElementRef = useRef(null);
+
+  const handleScrollButtonClick = () => {
+    // Check if the ref exists and if the element is ready
+    if (targetElementRef.current) {
+      // Scroll the element into view
+      targetElementRef.current.scrollIntoView({
+        behavior: "smooth", // Use 'auto' for instant scroll without animation
+        block: "start", // 'start', 'center', 'end', or 'nearest'
+      });
+    }
+  };
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -62,7 +78,10 @@ const MainSection = () => {
         flex: 1,
       }}
     >
-      <HeaderImages />
+      <HeaderImages
+        handleChange={setValue}
+        handleScrollButtonClick={handleScrollButtonClick}
+      />
       <TopNavigation
         value={value}
         handleChange={handleChange}
@@ -78,31 +97,41 @@ const MainSection = () => {
       />
 
       <CustomTabPanel value={value} index={0}>
-        <Banners />
+        <Banners
+          liveCasino={liveCasino}
+          slotGames={slotGames}
+          sportsBetting={sportsBetting}
+          handleChange={setValue}
+          handleScrollButtonClick={handleScrollButtonClick}
+        />
       </CustomTabPanel>
 
       <CustomTabPanel value={value} index={1}>
-        <Banners />
+        <Banners
+          liveCasino={liveCasino}
+          slotGames={slotGames}
+          sportsBetting={sportsBetting}
+          handleChange={setValue}
+          handleScrollButtonClick={handleScrollButtonClick}
+        />
       </CustomTabPanel>
 
       <CustomTabPanel value={value} index={2}>
-        <Banners />
+        <Banners
+          liveCasino={liveCasino}
+          slotGames={slotGames}
+          sportsBetting={sportsBetting}
+          handleChange={setValue}
+          handleScrollButtonClick={handleScrollButtonClick}
+        />
       </CustomTabPanel>
 
       <CustomTabPanel value={value} index={3}>
         <div className={classes.providerCardContainer}>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} id="targetElement" ref={targetElementRef}>
             {allowedGames &&
               Object.keys(allowedGames).map((key) => (
-                <Grid
-                  item
-                  xs={6}
-                  sm={4}
-                  md={3}
-                  lg={1.71}
-                  key={key}
-                  sx={{ flex: 1 }}
-                >
+                <Grid item xs={6} sm={4} md={3} lg={1.71} key={key}>
                   <Link href={`/${key}`}>
                     <GameCard item={allowedGames[key]} identifier={key} />
                   </Link>
@@ -113,18 +142,39 @@ const MainSection = () => {
       </CustomTabPanel>
 
       <CustomTabPanel value={value} index={4}>
-        <Banners />
+        <Banners
+          liveCasino={liveCasino}
+          slotGames={slotGames}
+          sportsBetting={sportsBetting}
+          handleChange={setValue}
+          handleScrollButtonClick={handleScrollButtonClick}
+        />
       </CustomTabPanel>
 
       <CustomTabPanel value={value} index={5}>
-        <Banners />
+        <Banners
+          liveCasino={liveCasino}
+          slotGames={slotGames}
+          sportsBetting={sportsBetting}
+          handleChange={setValue}
+          handleScrollButtonClick={handleScrollButtonClick}
+        />
       </CustomTabPanel>
 
       <CustomTabPanel value={value} index={6}>
-        <Banners />
+        <Banners
+          liveCasino={liveCasino}
+          slotGames={slotGames}
+          sportsBetting={sportsBetting}
+          handleChange={setValue}
+          handleScrollButtonClick={handleScrollButtonClick}
+        />
       </CustomTabPanel>
 
-      <Providers />
+      <Providers
+        handleChange={setValue}
+        handleScrollButtonClick={handleScrollButtonClick}
+      />
     </Stack>
   );
 };

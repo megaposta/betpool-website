@@ -1,11 +1,11 @@
 .mainSection {
-  flex: 1;
-  position: relative;
-  overflow: auto;
+  flex: 1 !important;
+  position: relative !important;
+  overflow: auto !important;
 }
 
 .providerCardContainer {
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 1rem;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  padding: 1rem !important;
 }

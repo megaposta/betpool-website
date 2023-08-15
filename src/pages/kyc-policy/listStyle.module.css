@@ -1,50 +1,50 @@
 .numbered_list {
-  list-style: none;
-  counter-reset: item;
-  padding: 0;
-  padding-left: 2rem;
+  list-style: none !important;
+  counter-reset: item !important;
+  padding: 0 !important;
+  padding-left: 2rem !important;
 }
 
 .numbered_list li {
-  counter-increment: item;
-  margin-bottom: 8px;
-  position: relative;
+  counter-increment: item !important;
+  margin-bottom: 8px !important;
+  position: relative !important;
 }
 
 .numbered_list li:before {
   content: counter(item) ")";
-  font-weight: bold;
-  margin-right: 8px;
+  font-weight: bold !important;
+  margin-right: 8px !important;
 }
 
 .dashed_list {
-  list-style: none;
-  padding: 0;
-  padding-left: 2rem;
+  list-style: none !important;
+  padding: 0 !important;
+  padding-left: 2rem !important;
 }
 
 .dashed_list li {
-  margin-bottom: 8px;
-  padding-left: 20px;
-  position: relative;
+  margin-bottom: 8px !important;
+  padding-left: 20px !important;
+  position: relative !important;
 }
 
 .dashed_list li:before {
-  content: "-";
-  position: absolute;
-  left: 0;
+  content: "-" !important;
+  position: absolute !important;
+  left: 0 !important;
 }
 
 .numeric_list {
-  list-style-type: decimal;
-  padding-left: 20px;
+  list-style-type: decimal !important;
+  padding-left: 20px !important;
 }
 
 .numeric_list li {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 !important;
 }
 
 .alphabetical_list {
-  list-style-type: lower-alpha;
-  padding-left: 20px;
+  list-style-type: lower-alpha !important;
+  padding-left: 20px !important;
 }

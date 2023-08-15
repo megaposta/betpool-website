@@ -2,19 +2,21 @@ import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import React from "react";
+import React, { useState } from "react";
 import classes from "../../footerMenu.module.css";
 import Image from "next/image";
 import enFlag from "../../../../../../public/flags/en.svg";
 import brFlag from "../../../../../../public/flags/br.svg";
-import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 
 const CopyRightsAndLang = () => {
   const theme = useTheme();
   const mediaQuery400 = useMediaQuery(theme.breakpoints.down("400"));
   const mediaQuery550 = useMediaQuery(theme.breakpoints.down("550"));
-
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
+  const router = useRouter();
+  const [value, setValue] = useState(router.locale);
   const langs = [
     {
       value: t("English"),
@@ -25,12 +27,12 @@ const CopyRightsAndLang = () => {
     {
       value: t("Brazilian"),
       label: t("Brazilian"),
-      code: "pt-BR",
+      code: "pt-br",
       flag: brFlag,
     },
   ];
   const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
+    router.push(router.pathname, router.asPath, { locale: lang });
   };
 
   return (
@@ -60,6 +62,7 @@ const CopyRightsAndLang = () => {
             },
           }}
           defaultValue="en"
+          value={value}
           displayEmpty
           renderValue={(value) => {
             return (
@@ -81,11 +84,12 @@ const CopyRightsAndLang = () => {
                     marginRight: "0.5rem",
                   }}
                 />
-                {value === "en" ? t("Eglish") : t("Brazilian")}
+                {value === "en" ? t("English") : t("Brazilian")}
               </Box>
             );
           }}
           onChange={(e) => {
+            setValue(e.target.value);
             changeLanguage(e.target.value);
           }}
         >

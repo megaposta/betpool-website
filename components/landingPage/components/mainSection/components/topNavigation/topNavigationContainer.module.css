@@ -1,14 +1,14 @@
 .topNavigationContainer {
-  border-radius: 16px;
-  background: #fff;
-  padding: 12px 24px;
+  border-radius: 16px !important;
+  background: #fff !important;
+  padding: 12px 24px !important;
 
   /* shadow 4 */
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.08) !important;
 }
 
 @media screen and (max-width: 400px) {
   .topNavigationContainer {
-    padding: 12px;
+    padding: 12px !important;
   }
 }

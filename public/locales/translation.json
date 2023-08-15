@@ -20,7 +20,7 @@
     "English": "English",
     "Brazilian": "Brazilian"
   },
-  "pt_BR": {
+  "pt-br": {
     "TopHeader": {
       "loginButton": "Conecte-se",
       "registerButton": "Registro"

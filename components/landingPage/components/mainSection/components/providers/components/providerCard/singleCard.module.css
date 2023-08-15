@@ -1,17 +1,17 @@
 .cardLogo {
-  border-radius: 16px 16px 0px 0px;
-  background: #e10a0a;
-  text-align: center;
-  padding: 1rem;
+  border-radius: 16px 16px 0px 0px !important;
+  background: #e10a0a !important;
+  text-align: center !important;
+  padding: 1rem !important;
 }
 .cardLogo img {
-  border-radius: 16px 16px 0px 0px;
+  border-radius: 16px 16px 0px 0px !important;
 }
 
 .cardContent {
-  padding: 9px;
-  font-weight: 600;
-  font-size: 12px;
-  min-height: 70px;
-  font-family: "Instrument Sans";
+  padding: 9px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  min-height: 70px !important;
+  font-family: "Instrument Sans" !important;
 }

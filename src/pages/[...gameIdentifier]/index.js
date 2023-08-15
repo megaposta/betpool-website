@@ -2,7 +2,6 @@
 import { Stack, Typography } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import Providers from "../../../components/landingPage/components/mainSection/components/providers";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DataContext } from "../../../context/DataContext";
 import {
   GET_ALLOWED_DESKTOP_GAMES,
@@ -10,6 +9,7 @@ import {
   basrUrl,
 } from "@/endpoints";
 import { useRouter } from "next/router";
+import TranslationData from "../../../public/locales/translation.json";
 
 const GamePage = ({ serverData, gamesProvider }) => {
   const { setProviders } = useContext(DataContext);
@@ -36,10 +36,9 @@ const GamePage = ({ serverData, gamesProvider }) => {
       <Stack
         sx={{
           height: "90vh",
-
           borderRadius: "18.312px",
           border: "1.145px solid  #F2F1F1",
-          background: "#FEFDFE",
+          backgroundColor: "#FEFDFE",
         }}
       >
         <iframe
@@ -60,7 +59,7 @@ const GamePage = ({ serverData, gamesProvider }) => {
               fontSize: "18px",
               fontStyle: "normal",
               fontWeight: 700,
-              lineHeight: "28px" /* 155.556% */,
+              lineHeight: "28px",
             }}
           >
             {selectedGame.title}
@@ -72,7 +71,7 @@ const GamePage = ({ serverData, gamesProvider }) => {
               fontSize: "12px",
               fontStyle: "normal",
               fontWeight: 500,
-              lineHeight: "28px" /* 155.556% */,
+              lineHeight: "28px",
             }}
           >
             {selectedGame.provider}
@@ -86,18 +85,16 @@ const GamePage = ({ serverData, gamesProvider }) => {
 
 export default GamePage;
 
-export const getServerSideProps = async (/* { locale } */) => {
-  // Fetch data from an API or any other source
+export const getServerSideProps = async ({ locale }) => {
   const response = await fetch(GET_ALLOWED_DESKTOP_GAMES);
   const data = await response.json();
 
   const responseProviders = await fetch(GET_GAMES_PROVIDERS);
   const providersData = await responseProviders.json();
 
-  // Return the data as props
   return {
     props: {
-      // ...(await serverSideTranslations(locale, ["translation", "common"])),
+      messages: TranslationData[locale],
       serverData: data,
       gamesProvider: providersData,
     },

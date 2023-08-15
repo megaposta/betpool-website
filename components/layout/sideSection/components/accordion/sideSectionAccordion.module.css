@@ -12,28 +12,28 @@
 }
 
 .accordionTitle {
-  font-family: Instrument Sans;
-  font-weight: 700;
-  font-size: 0.6rem;
-  position: relative;
+  font-family: Instrument Sans !important;
+  font-weight: 700 !important;
+  font-size: 0.6rem !important;
+  position: relative !important;
 }
 .accordionTitle::after {
-  content: "";
-  position: absolute;
-  bottom: -125%;
-  left: 0;
-  width: 100%;
-  border-bottom: 1px solid black;
+  content: "" !important;
+  position: absolute !important;
+  bottom: -125% !important;
+  left: 0 !important;
+  width: 100% !important;
+  border-bottom: 1px solid black !important;
 }
 
 .extended {
-  color: #e10a0a;
+  color: #e10a0a !important;
 }
 .extended::after {
-  bottom: -180%;
-  border-bottom: 1px solid #e10a0a;
+  bottom: -180% !important;
+  border-bottom: 1px solid #e10a0a !important;
 }
 
 .accordionDetails {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5 !important;
 }

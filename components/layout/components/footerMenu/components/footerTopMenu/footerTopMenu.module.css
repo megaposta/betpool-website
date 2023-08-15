@@ -1,19 +1,20 @@
 .footerTopMenuLinkStyle {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .footerTopMenuHeader {
   font-family: "Bai Jamjuree", sans-serif !important;
-  font-weight: 700;
-  color: #1f2947;
+  font-weight: 700 !important;
+  color: #1f2947 !important;
 }
 
 .footerTopMenuLink {
-  font-weight: 400;
-  color: #1f2947;
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  color: #1f2947 !important;
   font-family: "Sofia Pro", sans-serif !important;
 }
 
 .mAuto {
-  margin: 0 auto;
+  margin: 0 auto !important;
 }

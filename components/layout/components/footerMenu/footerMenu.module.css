@@ -1,11 +1,11 @@
 .footerContainer {
-  background-color: #fff;
-  margin-top: 2rem;
-  padding: 5rem 0 1rem 0;
+  background-color: #fff !important;
+  margin-top: 2rem !important;
+  padding: 5rem 0 1rem 0 !important;
 }
 
 .sofiaProFont {
   font-family: "Sofia Pro", sans-serif !important;
-  font-size: 0.8rem;
-  color: #1f2947;
+  font-size: 0.8rem !important;
+  color: #1f2947 !important;
 }

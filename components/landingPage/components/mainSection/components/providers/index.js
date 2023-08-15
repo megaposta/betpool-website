@@ -4,11 +4,10 @@ import React from "react";
 import providersIcon from "../../../../../../public/landingPage/mainSection/providers/providers.svg";
 import classes from "./providers.module.css";
 import ProviderCards from "./components/providerCard";
-import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 
-const Providers = () => {
-  const { t } = useTranslation();
-
+const Providers = ({ handleChange, handleScrollButtonClick }) => {
+  const t = useTranslations();
   return (
     <Stack>
       <Stack
@@ -36,7 +35,10 @@ const Providers = () => {
           {t("HeaderNavigation.viewAll")}
         </Button>
       </Stack>
-      <ProviderCards />
+      <ProviderCards
+        handleChange={handleChange}
+        handleScrollButtonClick={handleScrollButtonClick}
+      />
     </Stack>
   );
 };

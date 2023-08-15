@@ -1,8 +1,8 @@
 .providersHeader {
-  border-radius: 16px 16px 0px 0px;
-  background: #fff;
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.08);
-  padding: 16px;
+  border-radius: 16px 16px 0px 0px !important;
+  background: #fff !important;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.08) !important;
+  padding: 16px !important;
 }
 .providersTitle {
   color: #1f2947 !important;

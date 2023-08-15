@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { DataContext } from "../../../../../../../../context/DataContext";
 
-const ProviderCards = () => {
+const ProviderCards = ({ handleChange, handleScrollButtonClick }) => {
   const { providers } = useContext(DataContext);
   const settings = {
     dots: false,
@@ -62,6 +62,12 @@ const ProviderCards = () => {
       <Slider {...settings}>
         {providers.map((item) => (
           <div
+            onClick={() => {
+              handleChange(3);
+              setTimeout(() => {
+                handleScrollButtonClick();
+              }, 300);
+            }}
             key={item.id}
             className={`${classes.cardContainer} ${
               providers.length < 6 ? classes.customWidth : ""

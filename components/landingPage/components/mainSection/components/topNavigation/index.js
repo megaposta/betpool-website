@@ -11,7 +11,7 @@ import openChatIcon from "../../../../../../public/landingPage/mainSection/topNa
 import TopNavigationItem from "./components/topNavigationItem";
 import classes from "./topNavigationContainer.module.css";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 
 const TopNavigation = ({
   customSx,
@@ -23,8 +23,7 @@ const TopNavigation = ({
   handleChange,
   a11yProps,
 }) => {
-  const { t } = useTranslation();
-
+  const t = useTranslations();
   const data = [
     {
       title: t("TopNavigation.Home"),

@@ -1,5 +1,5 @@
 .buttonRoundedStyle {
-  border-radius: 999px;
+  border-radius: 999px !important;
 }
 
 .nestedButtonRoundedStyle {
@@ -7,21 +7,21 @@
 }
 
 .title span {
-  font-size: 0.7rem;
+  font-size: 0.7rem !important;
   font-weight: 700 !important;
 }
 
 .buttonRoundedStyle:hover,
 .opened {
-  background: #e10a0a;
+  background: #e10a0a !important;
 }
 
 .buttonRoundedStyle:hover .title span,
 .openedTitle {
-  color: #fff;
+  color: #fff !important;
 }
 .buttonRoundedStyle:hover > svg,
 .openedIcon {
   fill: #fff !important;
-  color: #fff;
+  color: #fff !important;
 }

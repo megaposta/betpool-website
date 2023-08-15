@@ -5,12 +5,20 @@ import heroImage from "../../../../../../public/landingPage/mainSection/HeaderIm
 import mobileHeroImage from "../../../../../../public/landingPage/mainSection/CasinoHeaderMobileImage.png";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 
-const HeaderImages = () => {
+const HeaderImages = ({ handleChange, handleScrollButtonClick }) => {
   const theme = useTheme();
-  const mediaQuery600 = useMediaQuery(theme.breakpoints.down("600"));
+  // const mediaQuery600 = useMediaQuery(theme.breakpoints.down("600"));
   const mediaQuery500 = useMediaQuery(theme.breakpoints.down("500"));
   return (
-    <Box className={classes.imageContainer}>
+    <Box
+      className={classes.imageContainer}
+      onClick={() => {
+        handleChange(3);
+        setTimeout(() => {
+          handleScrollButtonClick();
+        }, 300);
+      }}
+    >
       {mediaQuery500 ? (
         <Image
           src={mobileHeroImage}

@@ -1,16 +1,17 @@
 .imgContainer {
   height: 10em !important;
-  border-radius: 16px;
-  position: relative;
+  border-radius: 16px !important;
+  position: relative !important;
+  cursor: pointer !important;
 }
 
 .bannerImg {
-  width: 100%;
-  border-radius: 16px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100% !important;
+  border-radius: 16px !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
   /* object-fit: cover; */
 }
 @media screen and (max-width: 600px) {
@@ -18,6 +19,6 @@
     height: 12em !important;
   }
   .bannerImg {
-    height: 100%;
+    height: 100% !important;
   }
 }

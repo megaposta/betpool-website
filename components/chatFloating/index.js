@@ -1,5 +1,4 @@
 import React from "react";
-import Fab from "@mui/material/Fab";
 import Image from "next/image";
 import chatIcon from "../../public/landingPage/mainSection/topNavigation/open-chat-icon.png";
 import { Box, useMediaQuery, useTheme } from "@mui/material";

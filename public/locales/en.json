@@ -1,0 +1,21 @@
+{
+  "TopHeader": {
+    "loginButton": "Login",
+    "registerButton": "Register"
+  },
+  "TopNavigation": {
+    "Home": "Home",
+    "AllSports": "All Sports",
+    "In-play": "In-play",
+    "Casino": "Casino",
+    "LiveCasino": "Live Casino",
+    "Aviator": "Aviator",
+    "Plinko": "Plinko"
+  },
+  "HeaderNavigation": {
+    "Providers": "Providers",
+    "viewAll": "View All"
+  },
+  "English": "English",
+  "Brazilian": "Brazilian"
+}

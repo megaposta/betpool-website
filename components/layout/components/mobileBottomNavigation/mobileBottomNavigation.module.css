@@ -1,11 +1,11 @@
 .title {
-  color: #ffa3a3;
-  text-align: center;
+  color: #ffa3a3 !important;
+  text-align: center !important;
 
   /* Sports/Body/Bold/12px */
-  font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px; /* 133.333% */
+  font-family: Roboto !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 16px !important; /* 133.333% */
 }

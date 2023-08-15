@@ -1,5 +1,4 @@
 import React from "react";
-
 import Card from "@mui/material/Card";
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
@@ -18,7 +17,7 @@ const SingleCard = ({ item }) => {
           src={providerLogo(item.id)}
           alt={item.title}
           width={70}
-          height={30}
+          height={20}
         />
       </Box>
       <Stack justifyContent={"space-around"} className={classes.cardContent}>
